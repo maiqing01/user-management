@@ -1,0 +1,6 @@
+#生产环境
+spring:
+  security:
+    user:
+      name: hypertech-prod
+      password: hypertech-prod

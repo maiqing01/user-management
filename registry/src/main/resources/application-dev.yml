@@ -1,0 +1,6 @@
+#开发环境
+spring:
+  security:
+    user:
+      name: hypertech-dev
+      password: hypertech-dev

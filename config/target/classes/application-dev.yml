@@ -1,0 +1,23 @@
+spring:
+  security:
+    user:
+      name: user
+      password: ${CONFIG_SERVER_PASSWORD:password}
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/maiqing01/user-management
+          search-paths: config-repo
+          username: 641298213@qq.com
+          password: maiqing19960617.
+          default-label: master
+  rabbitmq:
+    host: 203.195.213.43
+    port: 5672
+    username: guest
+    password: guest
+
+eureka:
+  username: hypertech-dev
+  password: hypertech-dev

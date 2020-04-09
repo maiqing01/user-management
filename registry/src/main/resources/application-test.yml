@@ -1,0 +1,6 @@
+#测试环境
+spring:
+  security:
+    user:
+      name: hypertech-test
+      password: hypertech-test
