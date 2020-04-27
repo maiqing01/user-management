@@ -2,7 +2,7 @@ server:
   port: 8888
 eureka:
   instance:
-    hostname: config-center
+    hostname: config
     prefer-ip-address: true
     metadata-map:
       user.name: ${spring.security.user.name}
@@ -15,3 +15,13 @@ spring:
     name: config-center
   profiles:
     active: dev
+logging:
+  file: "logs/config.log"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "health,env,metrics,trace,dump,jolokia,info,configprops,trace,logfile,refresh,flyway,liquibase,heapdump,loggers,auditevents,hystrix.stream"
+  endpoint:
+    health:
+      show-details: always

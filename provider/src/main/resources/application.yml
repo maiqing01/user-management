@@ -1,0 +1,30 @@
+eureka:
+  username: hypertech-dev
+  password: hypertech-dev
+  instance:
+    hostname: provider
+    prefer-ip-address: true
+    leaseRenewalIntervalInSeconds: 10
+    health-check-url-path: /actuator/health #2.0后actuator的地址发生了变化
+    metadata-map:
+      user.name: ${spring.security.user.name}
+      user.password: ${spring.security.user.password}
+  client:
+    service-url:
+      defaultZone: http://${eureka.username}:${eureka.password}@registry:8761/eureka/
+spring:
+  application:
+    name: provider
+server:
+  port: 8089
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://localhost:8060/auth/api/member
+      id: provider
+ribbon:
+  http:
+    client:
+      enabled: false
+  okhttp:
+    enabled: true

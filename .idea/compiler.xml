@@ -7,18 +7,26 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="gateway" />
-        <module name="registry" />
+        <module name="provider" />
         <module name="config" />
+        <module name="auth" />
+        <module name="registry" />
+        <module name="monitor" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="config-center" target="1.8" />
+      <module name="monitor (1)" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="auth" options="-parameters" />
       <module name="config" options="-parameters" />
       <module name="gateway" options="-parameters" />
+      <module name="monitor" options="-parameters" />
+      <module name="monitor (1)" options="-parameters" />
+      <module name="provider" options="-parameters" />
       <module name="registry" options="-parameters" />
       <module name="user-management" options="-parameters" />
     </option>

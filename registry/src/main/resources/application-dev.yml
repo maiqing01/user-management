@@ -4,3 +4,9 @@ spring:
     user:
       name: hypertech-dev
       password: hypertech-dev
+ribbon:
+  okhttp:
+    enabled: true
+  http:
+    client:
+      enabled: false
