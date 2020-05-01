@@ -43,6 +43,8 @@ zuul:
     connect-timeout-millis: 3000
     socket-timeout-millis: 3000
   add-proxy-headers: true
+  sensitive-headers: Access-Control-Allow-Origin
+  ignored-headers: Access-Control-Allow-Origin,H-APP-Id,Token,APPToken
 #---------------------okHttp---------------------
 
 #---------------------OAuth2---------------------

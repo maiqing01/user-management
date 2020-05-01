@@ -16,8 +16,6 @@ import java.util.Set;
 @Service
 public class MyUserDetailService implements UserDetailsService {
 
-
-
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
@@ -33,11 +31,8 @@ public class MyUserDetailService implements UserDetailsService {
         GrantedAuthority permission = new SimpleGrantedAuthority("/api/current");
         grantedAuthorities.add(permission);
 
-        User user = new User(username,username,enabled,accountNonExpired,credentialsNonExpired,accountNonLocked,grantedAuthorities);
+        User user = new User(username,"abc",enabled,accountNonExpired,credentialsNonExpired,accountNonLocked,grantedAuthorities);
         return user;
 
     }
-
-
-
 }
